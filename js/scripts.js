@@ -16,11 +16,6 @@ PizzaOven.prototype.getToppings = function() {
   }
 }
 
-//original
-// PizzaOven.prototype.addTopping = function(topping) {
-//   this.toppings.push(topping);
-// }
-
 PizzaOven.prototype.addSize = function(size) {
   this.size = size;
 }
@@ -36,6 +31,10 @@ PizzaOven.prototype.pizzaPrice = function(pizzaToPrice) {
   let price = baseCost + (toppingCost * 0.75)
   this.price = price  
 }
+
+PizzaOven.prototype.addName = function(name) {
+  this.custName = name;
+}
   
 
 
@@ -46,12 +45,10 @@ function handleFormSubmission() {
   let custName = document.getElementById("cust-name").value;
   let size = document.getElementById("sizes");
   let sizeValue = size.options[size.selectedIndex].value
-    // console.log('customername ', custName, "wants a ", sizeValue);
   let pizza = new PizzaOven()
   pizza.addSize(sizeValue);
-  // toppings = getToppings()
-  // console.log('getToppings() successful ')
   pizza.getToppings();
+  pizza.addName(custName);
   console.log('pizza toppings added to object!', pizza)
 }
 
