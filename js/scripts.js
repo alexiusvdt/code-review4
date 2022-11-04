@@ -31,12 +31,17 @@ PizzaOven.prototype.pizzaPrice = function(pizzaToPrice) {
 // ui logik
 
 function handleFormSubmission() {
-  event.preventDefault
-  //get data from pizza object 
-  //etc
+  event.preventDefault()
+  let custName = document.getElementById("cust-name").value;
+  let size = document.getElementById("sizes");
+  console.log(size)
+  let sizeValue = size.options[size.selectedIndex].value
+  console.log('form = handled!')
+  console.log('customername ', custName, "wants a ", sizeValue);
+  
 }
 
 
-// window.addEventListener("load", function() {
-//   document.querySelector("form#id").addEventListener("submit", handleFormSubmission)
-// })
+window.addEventListener("load", function() {
+  document.querySelector("form#pizza-builder").addEventListener("submit", handleFormSubmission);
+})
