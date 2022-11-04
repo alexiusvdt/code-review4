@@ -8,10 +8,6 @@ body {
   display: none;
 }
 
-[name=-hidden] {
-  display: none;
-}
-
 [name=order-card] {
   background-color: #1d1aab;
 }

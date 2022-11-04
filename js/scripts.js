@@ -53,7 +53,8 @@ PizzaOven.prototype.assemblePie = function(sizeValue, custName, pizza) {
 // ui logik
 
 function handleFormSubmission() {
-  event.preventDefault()
+  event.preventDefault();
+  resetHidden();
   let custName = document.getElementById("cust-name").value;
   let size = document.getElementById("sizes");
   let sizeValue = size.options[size.selectedIndex].value
@@ -64,13 +65,15 @@ function handleFormSubmission() {
   printOrder(pizza);
 }
 
+function resetHidden() {
+  document.getElementById("order-result").setAttribute("name", "-hidden");
+}
+
 function printOrder(pizza) {
   document.querySelector("[name=-hidden").removeAttribute("name");
   document.getElementById("order-name").innerText = pizza.custName;
   document.getElementById("bake-time").innerText = pizza.bakeTime;
   document.getElementById("order-cost").innerText = Intl.NumberFormat('en-US', { style: 'currency', currency: "USD" }).format(pizza.price);
-  // original
-  // document.getElementById("order-cost").innerText = pizza.price;
 }
 
 window.addEventListener("load", function() {
