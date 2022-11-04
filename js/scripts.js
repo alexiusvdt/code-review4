@@ -4,7 +4,8 @@ function PizzaOven() {
   this.size = "";
   this.toppings = [];
   this.price = 0;
-  this.custName = ""; 
+  this.custName = "";
+  this.bakeTime = 0;
 }
 
 PizzaOven.prototype.getToppings = function() {
@@ -15,11 +16,9 @@ PizzaOven.prototype.getToppings = function() {
   }
 }
 
-
 PizzaOven.prototype.addSize = function(size) {
   this.size = size;
 }
-
 
 PizzaOven.prototype.pizzaPrice = function(pizzaToPrice) {
   let baseCost = 15
@@ -33,10 +32,14 @@ PizzaOven.prototype.pizzaPrice = function(pizzaToPrice) {
   this.price = price  
 }
 
+
 PizzaOven.prototype.addName = function(name) {
   this.custName = name;
 }
-  
+
+PizzaOven.prototype.getBakeTime = function() {
+  this.bakeTime = Math.floor(Math.random() * 101);
+}
 
 
 // ui logik
@@ -46,11 +49,14 @@ function handleFormSubmission() {
   let custName = document.getElementById("cust-name").value;
   let size = document.getElementById("sizes");
   let sizeValue = size.options[size.selectedIndex].value
-  let pizza = new PizzaOven()
+  console.log('lets bake a pie:')
+  let pizza = new PizzaOven();
   pizza.addSize(sizeValue);
   pizza.getToppings();
   pizza.addName(custName);
-  console.log('pizza toppings added to object!', pizza)
+  pizza.getBakeTime();
+  pizza.pizzaPrice(pizza);
+  console.log('mmm, pizza! ', pizza)
 }
 
 
