@@ -52,6 +52,7 @@ PizzaOven.prototype.assemblePie = function(sizeValue, custName, pizza) {
 }
 
 
+
 // ui logik
 
 function handleFormSubmission() {
@@ -79,5 +80,6 @@ function printOrder(pizza) {
 }
 
 window.addEventListener("load", function() {
-  document.querySelector("form#pizza-builder").addEventListener("submit", handleFormSubmission);
+  document.getElementById("end-order").addEventListener("click", handleFormSubmission);
+  document.getElementById("new-order").addEventListener('click', newOrder);
 })

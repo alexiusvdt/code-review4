@@ -12,7 +12,7 @@ body {
   display: none;
 }
 
-[name=order-card] {
+#order-card {
   background-color: #1d1aab;
 }
 

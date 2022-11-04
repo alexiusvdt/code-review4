@@ -82,6 +82,12 @@ code: OrderTracker
 result: OrderTracker
 
 
+Describe newOrder()
+
+Test: it will create an instance of OrderTracker and an initial PizzaOven object
+code: newOrder()
+result: OrderTracker{..}, PizzaOven {..}
+
 
 # ideas for addl tests:
 * allow user to order multiple pizzas at once
