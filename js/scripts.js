@@ -1,5 +1,6 @@
 // business logik
-
+function OrderTracker() {
+}
 
 function PizzaOven() {
   this.size = "";
@@ -10,7 +11,7 @@ function PizzaOven() {
 }
 
 PizzaOven.prototype.getToppings = function() {
-  let toppings = [];
+  // let toppings = [];
   const selections = document.querySelectorAll("input[type=checkbox]:checked") 
   for (i = 0; i < selections.length; i++) {
     this.toppings.push(selections[i].value);
