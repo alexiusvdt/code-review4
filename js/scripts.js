@@ -4,8 +4,7 @@ function PizzaOven() {
   this.size = "";
   this.toppings = [];
   this.price = 0;
-  this.custName = "";
-  
+  this.custName = ""; 
 }
 
 PizzaOven.prototype.getToppings = function() {
@@ -16,9 +15,11 @@ PizzaOven.prototype.getToppings = function() {
   }
 }
 
+
 PizzaOven.prototype.addSize = function(size) {
   this.size = size;
 }
+
 
 PizzaOven.prototype.pizzaPrice = function(pizzaToPrice) {
   let baseCost = 15

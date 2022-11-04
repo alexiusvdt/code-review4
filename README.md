@@ -61,6 +61,13 @@ pie sizes: regular, large, x-large| 15.00, 21.00, 26.00
 toppings: .75 ea
 
 
+Describe PizzaOven.prototype.bakeTime
+
+Test: it should return a random integer (x) where 30 <= x <= 59
+code: PizzaOven.prototype.bakeTime
+result: random integer (x) where 30 <= x <= 59
+
+
 
 # ideas for addl tests:
 * allow user to order multiple pizzas at once
