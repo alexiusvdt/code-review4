@@ -2,10 +2,12 @@
 
 function PizzaOven() {
   this.pizzaSize = "";
-  this.pizzaToppings = {};
+  this.pizzaToppings = [];
 }
 
-
+PizzaOven.prototype.addTopping = function(topping) {
+  this.pizzaToppings.push(topping);
+}
 
 
 // ui logik
