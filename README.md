@@ -32,9 +32,9 @@ Check out the live [github pages site](https://alexiusvdt.github.io/code-review4
 
 Describe PizzaOven()
 
-Test: It should return a PizzaOven object with properties for size, toppings, and price
+Test: It should return a PizzaOven object with properties for size, toppings, and price as well as customer name
 code: let pizza = new PizzaOven("large", ["pineapple", "tomato"], 10.99);
-result: PizzaOven {size: "large", toppings ["pineapple", "tomato"], 10.99}
+result: PizzaOven {size: "large", toppings ["pineapple", "tomato"], 10.99, "Geoff}
 
 
 Describe PizzaOven.prototype.addTopping

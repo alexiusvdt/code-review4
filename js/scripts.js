@@ -4,6 +4,7 @@ function PizzaOven() {
   this.size = "";
   this.toppings = [];
   this.price = 0;
+  
 }
 
 PizzaOven.prototype.addTopping = function(topping) {
@@ -34,11 +35,12 @@ function handleFormSubmission() {
   event.preventDefault()
   let custName = document.getElementById("cust-name").value;
   let size = document.getElementById("sizes");
-  console.log(size)
   let sizeValue = size.options[size.selectedIndex].value
-  console.log('form = handled!')
-  console.log('customername ', custName, "wants a ", sizeValue);
+    // console.log('customername ', custName, "wants a ", sizeValue);
+  let pizza = new PizzaOven()
+  pizza.addSize(sizeValue);
   
+  console.log('form = handled!')
 }
 
 
