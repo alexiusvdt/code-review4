@@ -48,13 +48,27 @@ Describe PizzaOven.prototype.addSize
 
 Test: It should add a size to the PizzaOven.pizzaSize property.
 code: PizzaOven.prototype.addSize("large");
-result: PIzzaOven. {size: "large", toppings []}
+result: PizzaOven {size: "large", toppings []}
+
+
+Describe PizzaOven.prototype.pizzaPrice
+
+Test: it should return a price based on property values of the PizzaOven
+code: PizzaOven.prototype.pizzaPrice(), PizzaOven (size: "large", toppings ["ham", "cheese"], price: ); 
+result: PizzaOven.price: 22.50
+cost logic:
+pie sizes: regular, large, x-large| 15.00, 21.00, 26.00
+toppings: .75 ea
+
 
 
 
 # ideas for addl tests:
 * allow user to order multiple pizzas at once
 * provide user with preset pizza options instead of entirely a la carte
+* add premium toppings that cost more
+* add premium crusts
+* add premium sauces
 
 ## Known Bugs
 

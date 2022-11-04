@@ -1,17 +1,17 @@
 // business logik
 
 function PizzaOven() {
-  this.pizzaSize = "";
-  this.pizzaToppings = [];
-  this.pizzaPrice = 0;
+  this.size = "";
+  this.toppings = [];
+  this.price = 0;
 }
 
 PizzaOven.prototype.addTopping = function(topping) {
-  this.pizzaToppings.push(topping);
+  this.toppings.push(topping);
 }
 
 PizzaOven.prototype.addSize = function(size) {
-  this.pizzaSize = size;
+  this.size = size;
 }
 
 
