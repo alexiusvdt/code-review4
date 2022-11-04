@@ -1,5 +1,6 @@
 // business logik
 function OrderTracker() {
+  this.orderId;
 }
 
 function PizzaOven() {
@@ -51,21 +52,29 @@ PizzaOven.prototype.assemblePie = function(sizeValue, custName, pizza) {
   pizza.pizzaPrice(pizza);
 }
 
-
+function newOrder() {
+  let customerOrder = new OrderTracker();
+  let pizza = new PizzaOven();
+  revealOptions()
+  return customerOrder, pizza
+}
 
 // ui logik
 
-function handleFormSubmission() {
+function handleFormSubmission(pizza, customerOrder) {
   event.preventDefault();
   resetHidden();
   let custName = document.getElementById("cust-name").value;
   let size = document.getElementById("sizes");
   let sizeValue = size.options[size.selectedIndex].value
   console.log('lets bake a pie:')
-  let pizza = new PizzaOven();
+  // let pizza = new PizzaOven();
   pizza.assemblePie(sizeValue, custName, pizza);
   console.log('mmm, pizza! ', pizza)
   printOrder(pizza);
+}
+function revealOptions() {
+  document.getElementById("order-card").removeAttribute("name");
 }
 
 function resetHidden() {
