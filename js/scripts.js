@@ -8,9 +8,18 @@ function PizzaOven() {
   
 }
 
-PizzaOven.prototype.addTopping = function(topping) {
-  this.toppings.push(topping);
+PizzaOven.prototype.getToppings = function() {
+  let toppings = [];
+  const selections = document.querySelectorAll("input[type=checkbox]:checked") 
+  for (i = 0; i < selections.length; i++) {
+    this.toppings.push(selections[i].value);
+  }
 }
+
+//original
+// PizzaOven.prototype.addTopping = function(topping) {
+//   this.toppings.push(topping);
+// }
 
 PizzaOven.prototype.addSize = function(size) {
   this.size = size;
@@ -28,13 +37,6 @@ PizzaOven.prototype.pizzaPrice = function(pizzaToPrice) {
   this.price = price  
 }
   
-function getToppings() {
-  let toppings = [];
-  const selections = document.querySelectorAll("input[type=checkbox]:checked") 
-  for (i = 0; i < selections.length; i++) {
-    toppings.push(selections[i].value);
-  }
-}
 
 
 // ui logik
@@ -47,9 +49,9 @@ function handleFormSubmission() {
     // console.log('customername ', custName, "wants a ", sizeValue);
   let pizza = new PizzaOven()
   pizza.addSize(sizeValue);
-  toppings = getToppings()
-  console.log('getToppings() successful ')
-  pizza.addTopping(toppings);
+  // toppings = getToppings()
+  // console.log('getToppings() successful ')
+  pizza.getToppings();
   console.log('pizza toppings added to object!', pizza)
 }
 

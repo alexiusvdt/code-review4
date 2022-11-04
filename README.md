@@ -37,9 +37,9 @@ code: let pizza = new PizzaOven("large", ["pineapple", "tomato"], 10.99);
 result: PizzaOven {size: "large", toppings ["pineapple", "tomato"], 10.99, "Geoff}
 
 
-Describe PizzaOven.prototype.addTopping
+Describe PizzaOven.prototype.addToppings
 
-Test: It should add a topping to the PizzaOven.pizzaToppings property.
+Test: It should add any selected topping(s) to the PizzaOven.pizzaToppings property.
 code: PizzaOven.prototype.addTopping("Salami");
 result: PizzaOven {size: "", toppings ["Salami"]}
 
@@ -59,13 +59,6 @@ result: PizzaOven.price: 22.50
 cost logic:
 pie sizes: regular, large, x-large| 15.00, 21.00, 26.00
 toppings: .75 ea
-
-
-Describes: getToppings();
-
-test: it should get the values of all selected toppings & store in an array
-code: getToppings();
-result: ["ham", "olives", "mushrooms"]
 
 
 
