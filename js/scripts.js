@@ -68,7 +68,9 @@ function printOrder(pizza) {
   document.querySelector("[name=-hidden").removeAttribute("name");
   document.getElementById("order-name").innerText = pizza.custName;
   document.getElementById("bake-time").innerText = pizza.bakeTime;
-  document.getElementById("order-cost").innerText = pizza.price;
+  document.getElementById("order-cost").innerText = Intl.NumberFormat('en-US', { style: 'currency', currency: "USD" }).format(pizza.price);
+  // original
+  // document.getElementById("order-cost").innerText = pizza.price;
 }
 
 window.addEventListener("load", function() {

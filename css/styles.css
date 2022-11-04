@@ -23,3 +23,15 @@ body {
 #order-result {
   background-color: #1aa6ab;
 }
+
+a:visited {
+  color: purple;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:hover {
+  color:orangered
+}
