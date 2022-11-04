@@ -28,8 +28,13 @@ PizzaOven.prototype.pizzaPrice = function(pizzaToPrice) {
   this.price = price  
 }
   
-function getToppings();
-
+function getToppings() {
+  let toppings = [];
+  const selections = document.querySelectorAll("input[type=checkbox]:checked") 
+  for (i = 0; i < selections.length; i++) {
+    toppings.push(selections[i].value);
+  }
+}
 
 
 // ui logik
@@ -43,7 +48,9 @@ function handleFormSubmission() {
   let pizza = new PizzaOven()
   pizza.addSize(sizeValue);
   toppings = getToppings()
-  console.log('form = handled!')
+  console.log('getToppings() successful ')
+  pizza.addTopping(toppings);
+  console.log('pizza toppings added to object!', pizza)
 }
 
 
