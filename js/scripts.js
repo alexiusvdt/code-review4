@@ -3,7 +3,7 @@
 function PizzaOven() {
   this.pizzaSize = "";
   this.pizzaToppings = [];
-  this.pizzaPrice = 0
+  this.pizzaPrice = 0;
 }
 
 PizzaOven.prototype.addTopping = function(topping) {
