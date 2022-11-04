@@ -34,7 +34,21 @@ Describe PizzaOven()
 
 Test: It should return a PizzaOven object with properties for size and toppings
 code: let pizza = new PizzaOven("large", ["pineapple", "tomato"]);
-result: PizzaOven { size: "large", toppings ["pineapple", "tomato"]}
+result: PizzaOven {size: "large", toppings ["pineapple", "tomato"]}
+
+
+Describe PizzaOven.prototype.addTopping
+
+Test: It should add a topping to the PizzaOven.pizzaToppings property.
+code: PizzaOven.prototype.addTopping("Salami");
+result: PizzaOven {size: "", toppings ["Salami"]}
+
+
+Describe PizzaOven.prototype.addSize
+
+Test: It should add a size to the PizzaOven.pizzaSize property.
+code: PizzaOven.prototype.addSize("large");
+result: PIzzaOven. {size: "large", toppings []}
 
 
 
