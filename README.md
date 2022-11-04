@@ -75,6 +75,12 @@ code: PizzaOven.prototype.assemblePie
 result: all PizzaOven.prototypes performed to instance of object
 
 
+Describe OrderTracker()
+
+Test: it will create an Object called OrderTracker with no properties
+code: OrderTracker
+result: OrderTracker
+
 
 
 # ideas for addl tests:

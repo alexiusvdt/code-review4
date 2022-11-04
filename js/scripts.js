@@ -1,5 +1,6 @@
 // business logik
 
+
 function PizzaOven() {
   this.size = "";
   this.toppings = [];
