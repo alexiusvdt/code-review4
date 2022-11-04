@@ -8,7 +8,6 @@ function PizzaOven() {
 }
 
 PizzaOven.prototype.getToppings = function() {
-  // let toppings = [];
   const selections = document.querySelectorAll("input[type=checkbox]:checked") 
   for (i = 0; i < selections.length; i++) {
     this.toppings.push(selections[i].value);
@@ -57,10 +56,10 @@ function handleFormSubmission() {
   let custName = document.getElementById("cust-name").value;
   let size = document.getElementById("sizes");
   let sizeValue = size.options[size.selectedIndex].value
-  console.log('lets bake a pie:')
+  // console.log('lets bake a pie:')
   let pizza = new PizzaOven();
   pizza.assemblePie(sizeValue, custName, pizza);
-  console.log('mmm, pizza! ', pizza)
+  // console.log('mmm, pizza! what a beauty: ', pizza)
   printOrder(pizza);
 }
 
@@ -76,5 +75,6 @@ function printOrder(pizza) {
 }
 
 window.addEventListener("load", function() {
-  document.getElementById("bake-it").addEventListener("click", handleFormSubmission);
+  document.querySelector("form#pizza-builder").addEventListener("submit", handleFormSubmission);
+  // document.querySelector("#bake-it").addEventListener("click", handleFormSubmission);
 })

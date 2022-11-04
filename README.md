@@ -59,7 +59,6 @@ result: PizzaOven.price: 22.50
 cost logic:
 pie sizes: regular, large, x-large| 15.00, 21.00, 26.00
 toppings: .75 ea
-<!-- premium toppings: 1.00 ea -->
 
 
 Describe PizzaOven.prototype.bakeTime
