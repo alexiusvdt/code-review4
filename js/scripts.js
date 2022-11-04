@@ -61,11 +61,14 @@ function handleFormSubmission() {
   let pizza = new PizzaOven();
   pizza.assemblePie(sizeValue, custName, pizza);
   console.log('mmm, pizza! ', pizza)
-  
+  printOrder(pizza);
 }
 
-
-
+function printOrder(pizza) {
+  document.getElementById("order-result").removeAttribute("class");
+  document.getElementById("order-name").innerText = pizza.custName;
+  document.getElementById("bake-time").innerText = pizza.bakeTime;
+}
 
 window.addEventListener("load", function() {
   document.querySelector("form#pizza-builder").addEventListener("submit", handleFormSubmission);
