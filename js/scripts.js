@@ -41,7 +41,13 @@ PizzaOven.prototype.getBakeTime = function() {
   this.bakeTime = Math.floor(Math.random() * 101);
 }
 
-
+PizzaOven.prototype.assemblePie = function(sizeValue, custName, pizza) {
+  pizza.addSize(sizeValue);
+  pizza.getToppings();
+  pizza.addName(custName);
+  pizza.getBakeTime();
+  pizza.pizzaPrice(pizza);
+}
 
 
 // ui logik
@@ -53,11 +59,7 @@ function handleFormSubmission() {
   let sizeValue = size.options[size.selectedIndex].value
   console.log('lets bake a pie:')
   let pizza = new PizzaOven();
-  pizza.addSize(sizeValue);
-  pizza.getToppings();
-  pizza.addName(custName);
-  pizza.getBakeTime();
-  pizza.pizzaPrice(pizza);
+  pizza.assemblePie(sizeValue, custName, pizza);
   console.log('mmm, pizza! ', pizza)
   
 }
