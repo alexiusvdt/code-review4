@@ -32,9 +32,9 @@ Check out the live [github pages site](https://alexiusvdt.github.io/code-review4
 
 Describe PizzaOven()
 
-Test: It should return a PizzaOven object with properties for size, toppings, and price as well as customer name
+Test: It should return a PizzaOven object with properties for size, toppings, and price as well as customer name, premium toppings
 code: let pizza = new PizzaOven("large", ["pineapple", "tomato"], 10.99);
-result: PizzaOven {size: "large", toppings ["pineapple", "tomato"], 10.99, "Geoff}
+result: PizzaOven {size: "large", toppings ["pineapple", "tomato"], premiumtoppings [], 10.99, "Geoff"}
 
 
 Describe PizzaOven.prototype.addToppings
@@ -59,6 +59,7 @@ result: PizzaOven.price: 22.50
 cost logic:
 pie sizes: regular, large, x-large| 15.00, 21.00, 26.00
 toppings: .75 ea
+premium toppings: 1.00 ea
 
 
 Describe PizzaOven.prototype.bakeTime

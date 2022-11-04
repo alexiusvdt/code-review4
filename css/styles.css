@@ -4,9 +4,10 @@ body {
   color: white
 }
 
-/* h2 {
-  font-weight: 400;
-} */
+.toppings {
+  flex-direction: column;
+}
+
 
 .hidden {
   display: none;
