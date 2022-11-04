@@ -53,6 +53,7 @@ PizzaOven.prototype.assemblePie = function(sizeValue, custName, pizza) {
 
 function handleFormSubmission() {
   event.preventDefault();
+  resetHidden();
   let custName = document.getElementById("cust-name").value;
   let size = document.getElementById("sizes");
   let sizeValue = size.options[size.selectedIndex].value
@@ -63,9 +64,9 @@ function handleFormSubmission() {
   printOrder(pizza);
 }
 
-// function resetHidden() {
-//   document.getElementById("order-result").setAttribute("name", "-hidden");
-// }
+function resetHidden() {
+  document.getElementById("order-result").setAttribute("name", "-hidden");
+}
 
 function printOrder(pizza) {
   document.querySelector("[name=-hidden").removeAttribute("name");

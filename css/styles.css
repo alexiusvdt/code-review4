@@ -4,6 +4,10 @@ body {
   color: white
 }
 
+/* h2 {
+  font-weight: 400;
+} */
+
 .hidden {
   display: none;
 }
