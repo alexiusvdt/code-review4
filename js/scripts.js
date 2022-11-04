@@ -1,7 +1,4 @@
 // business logik
-function OrderTracker() {
-}
-
 function PizzaOven() {
   this.size = "";
   this.toppings = [];
@@ -79,5 +76,5 @@ function printOrder(pizza) {
 }
 
 window.addEventListener("load", function() {
-  document.querySelector("form#pizza-builder").addEventListener("submit", handleFormSubmission);
+  document.getElementById("end-order").addEventListener("click", handleFormSubmission);
 })
