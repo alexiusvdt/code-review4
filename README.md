@@ -61,6 +61,12 @@ pie sizes: regular, large, x-large| 15.00, 21.00, 26.00
 toppings: .75 ea
 
 
+Describes: getToppings();
+
+test: it should get the values of all selected toppings & store in an array
+code: getToppings();
+result: ["ham", "olives", "mushrooms"]
+
 
 
 # ideas for addl tests:

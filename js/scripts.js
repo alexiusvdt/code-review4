@@ -28,6 +28,8 @@ PizzaOven.prototype.pizzaPrice = function(pizzaToPrice) {
   this.price = price  
 }
   
+function getToppings();
+
 
 
 // ui logik
@@ -40,7 +42,7 @@ function handleFormSubmission() {
     // console.log('customername ', custName, "wants a ", sizeValue);
   let pizza = new PizzaOven()
   pizza.addSize(sizeValue);
-  
+  toppings = getToppings()
   console.log('form = handled!')
 }
 
