@@ -9,6 +9,10 @@ PizzaOven.prototype.addTopping = function(topping) {
   this.pizzaToppings.push(topping);
 }
 
+PizzaOven.prototype.addSize = function(size) {
+  this.pizzaSize = size;
+}
+
 
 // ui logik
 
