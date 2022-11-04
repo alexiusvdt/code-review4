@@ -65,9 +65,10 @@ function handleFormSubmission() {
 }
 
 function printOrder(pizza) {
-  document.getElementById("order-result").removeAttribute("class");
+  document.querySelector("[name=-hidden").removeAttribute("name");
   document.getElementById("order-name").innerText = pizza.custName;
   document.getElementById("bake-time").innerText = pizza.bakeTime;
+  document.getElementById("order-cost").innerText = pizza.price;
 }
 
 window.addEventListener("load", function() {

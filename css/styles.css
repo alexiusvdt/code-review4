@@ -1,8 +1,25 @@
 body {
-  background-color: black;
-  color: white;
+  background-color: orangered;
+  font-family: 'Courier New', Courier, monospace;
+  color: white
 }
 
 .hidden {
   display: none;
+}
+
+[name=-hidden] {
+  display: none;
+}
+
+[name=order-card] {
+  background-color: #1d1aab;
+}
+
+[name=header-card] {
+  background-color: #651aab;
+}
+
+#order-result {
+  background-color: #1aa6ab;
 }

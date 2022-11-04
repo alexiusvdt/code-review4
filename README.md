@@ -9,7 +9,7 @@
 * HTML
 * CSS
 * JavaScript
-<!-- * bootstrap -->
+* bootstrap
 
 ## Description/objectives
 Pizza Parlor
@@ -73,6 +73,7 @@ Describe PizzaOven.prototype.assemblePie
 Test: it should run the various prototype methods required to populate an order for the customer
 code: PizzaOven.prototype.assemblePie
 result: all PizzaOven.prototypes performed to instance of object
+
 
 
 
