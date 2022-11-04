@@ -1,4 +1,4 @@
-# Mr. Robogers' Neighborhood
+# Urza's Pizza Mine
 
 #### By Alex Johnson
 
@@ -63,9 +63,16 @@ toppings: .75 ea
 
 Describe PizzaOven.prototype.bakeTime
 
-Test: it should return a random integer (x) where 30 <= x <= 59
+Test: it should return a random integer (x) where 0 <= x <= 100
 code: PizzaOven.prototype.bakeTime
-result: random integer (x) where 30 <= x <= 59
+result: random integer (x) where 0 <= x <= 100
+
+
+Describe PizzaOven.prototype.assemblePie
+
+Test: it should run the various prototype methods required to populate an order for the customer
+code: PizzaOven.prototype.assemblePie
+result: all PizzaOven.prototypes performed to instance of object
 
 
 

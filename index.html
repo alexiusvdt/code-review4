@@ -9,6 +9,7 @@
   <body>
     <h1>Urza's Pizza Mine</h1>
     <h2>A Howlin' Good Time!</h2>
+    <p>All pies are made a la carte, choose no toppings for a plain cheese pie.</p>
     <form id="pizza-builder">
       <div class="form-box">
         <label for="cust-name">Enter your name:</label>
@@ -39,11 +40,13 @@
         <input type="checkbox" id="mushrooms" value="mushrooms"><br>
         <br>
         <br>
-        <button type="submit" class="btn">Submit!</button>
+        <button type="submit" class="btn">Place my order!</button>
       </div>
-      <div id="order-form">
+      <div id="order-form" class="hidden">
         <h2>Thanks for your order!</h2>
-        <p id="order-name"></p>
+        <h3 id="order-name"></h3>
+        <p>Your pie will be ready in approx.:</p><p id="bake-time"></p><p>minutes!</p><br>
+        <p>Need to kill some time? Grab a friend and play a quick game of <a href ="https://alexiusvdt.github.io/pig-dice-coop/" target="_blank">pig dice</a>.</p>
       </div>
     </form>
   </body>

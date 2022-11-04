@@ -42,6 +42,8 @@ PizzaOven.prototype.getBakeTime = function() {
 }
 
 
+
+
 // ui logik
 
 function handleFormSubmission() {
@@ -57,7 +59,10 @@ function handleFormSubmission() {
   pizza.getBakeTime();
   pizza.pizzaPrice(pizza);
   console.log('mmm, pizza! ', pizza)
+  
 }
+
+
 
 
 window.addEventListener("load", function() {
