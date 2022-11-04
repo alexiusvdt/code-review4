@@ -4,6 +4,7 @@ function PizzaOven() {
   this.size = "";
   this.toppings = [];
   this.price = 0;
+  this.custName = "";
   
 }
 
