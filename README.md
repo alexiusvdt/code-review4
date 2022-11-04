@@ -30,7 +30,17 @@ Check out the live [github pages site](https://alexiusvdt.github.io/code-review4
 
 ## TESTS
 
+Describe PizzaOven()
 
+Test: It should return a PizzaOven object with properties for size and toppings
+code: let pizza = new PizzaOven("large", ["pineapple", "tomato"]);
+result: PizzaOven { size: "large", toppings ["pineapple", "tomato"]}
+
+
+
+# ideas for addl tests:
+* allow user to order multiple pizzas at once
+* provide user with preset pizza options instead of entirely a la carte
 
 ## Known Bugs
 
