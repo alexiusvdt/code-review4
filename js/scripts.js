@@ -1,5 +1,10 @@
 // business logik
 
+function PizzaOven() {
+  this.pizzaSize = "";
+  this.pizzaToppings = {};
+}
+
 
 
 
