@@ -1,50 +1,33 @@
 // business logik
-function PizzaOven() {
-  this.size = "";
+function PizzaOven(sizeValue, custName) {
+  this.size = sizeValue;
   this.toppings = [];
   this.price = 0;
-  this.custName = "";
+  this.custName = custName;
   this.bakeTime = 0;
 }
 
-PizzaOven.prototype.getToppings = function() {
-  const selections = document.querySelectorAll("input[type=checkbox]:checked") 
-  for (i = 0; i < selections.length; i++) {
+PizzaOven.prototype.getToppings = function () {
+  const selections = document.querySelectorAll("input[type=checkbox]:checked")
+  for (let i = 0; i < selections.length; i++) {
     this.toppings.push(selections[i].value);
   }
 }
 
-PizzaOven.prototype.addSize = function(size) {
-  this.size = size;
-}
-
-PizzaOven.prototype.pizzaPrice = function(pizzaToPrice) {
+PizzaOven.prototype.pizzaPrice = function () {
   let baseCost = 15
-  let toppingCost = pizzaToPrice.toppings.length
-  if (pizzaToPrice.size === "x-large") {
+  let toppingCost = this.toppings.length
+  if (this.size === "x-large") {
     baseCost = 26.00
-  } else if (pizzaToPrice.size === "large") {
+  } else if (this.size === "large") {
     baseCost = 21.00
   }
   let price = baseCost + (toppingCost * 0.75)
-  this.price = price  
+  this.price = price
 }
 
-
-PizzaOven.prototype.addName = function(name) {
-  this.custName = name;
-}
-
-PizzaOven.prototype.getBakeTime = function() {
-  this.bakeTime = Math.floor(Math.random() * 101);
-}
-
-PizzaOven.prototype.assemblePie = function(sizeValue, custName, pizza) {
-  pizza.addSize(sizeValue);
-  pizza.getToppings();
-  pizza.addName(custName);
-  pizza.getBakeTime();
-  pizza.pizzaPrice(pizza);
+PizzaOven.prototype.getBakeTime = function () {
+  this.bakeTime = Math.floor((Math.random() * 101) + 1);
 }
 
 
@@ -55,10 +38,12 @@ function handleFormSubmission() {
   resetHidden();
   let custName = document.getElementById("cust-name").value;
   let size = document.getElementById("sizes");
-  let sizeValue = size.options[size.selectedIndex].value
+  let sizeValue = size.options[size.selectedIndex].value;
   // console.log('lets bake a pie:')
-  let pizza = new PizzaOven();
-  pizza.assemblePie(sizeValue, custName, pizza);
+  let pizza = new PizzaOven(sizeValue, custName);
+  pizza.getBakeTime();
+  pizza.getToppings();
+  pizza.pizzaPrice();
   // console.log('mmm, pizza! what a beauty: ', pizza)
   printOrder(pizza);
 }
@@ -74,7 +59,7 @@ function printOrder(pizza) {
   document.getElementById("order-cost").innerText = Intl.NumberFormat('en-US', { style: 'currency', currency: "USD" }).format(pizza.price);
 }
 
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
   document.querySelector("form#pizza-builder").addEventListener("submit", handleFormSubmission);
   // document.querySelector("#bake-it").addEventListener("click", handleFormSubmission);
 })

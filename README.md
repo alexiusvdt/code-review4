@@ -54,29 +54,32 @@ result: PizzaOven {size: "large", toppings []}
 Describe PizzaOven.prototype.pizzaPrice
 
 Test: it should return a price based on property values of the PizzaOven 'regular'
-code: PizzaOven.prototype.pizzaPrice(), PizzaOven (size: "regular"); 
-result: PizzaOven.price: 15.00
+code: let pizza = new Pizza([], "regular");
+       myPizza.pizzaPrice();
+Expect(output).toEqual(15.00)
 
 Test: it should return a price based on property values of the PizzaOven 'large'
-code: PizzaOven.prototype.pizzaPrice(), PizzaOven (size: "large"); 
-result: PizzaOven.price: 21.00
-
+code: let pizza = new Pizza([], "regular");
+       myPizza.pizzaPrice();
+Expect(output).toEqual(21.00)
 
 Test: it should return a price based on property values of the PizzaOven 'x-large'
-code: PizzaOven.prototype.pizzaPrice(), PizzaOven (size: "large"); 
-result: PizzaOven.price: 26.00
+code: let pizza = new Pizza([], "regular");
+       myPizza.pizzaPrice();
+Expect(output).toEqual(26.00)
 
 Test: it should return a price based on the size and toppings values of the PizzaOven
-code: PizzaOven.prototype.pizzaPrice(), PizzaOven (size: "large", toppings ["ham","pineapple"]); 
-result: PizzaOven.price: 22.00
+code: let pizza = new Pizza(["ham", "sausage"], "regular");
+       myPizza.pizzaPrice();
+Expect(output).toEqual(16.50)
 
 
 
 Describe PizzaOven.prototype.bakeTime
 
-Test: it should return a random integer (x) where 0 <= x <= 100
+Test: it should return a random integer (x) where 0 < x <= 100
 code: PizzaOven.prototype.bakeTime
-result: random integer (x) where 0 <= x <= 100
+result: random integer (x) where 0 < x <= 100
 
 
 Describe PizzaOven.prototype.assemblePie
